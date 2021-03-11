@@ -1,0 +1,51 @@
+{
+    "FORMAT": "ID: {'name': 'name', 'info': 'description', 'DATA': {'magdmg': int, 'edmg': int, 'fdmg': int, '?has_abilities': bool, 'abilities': 'refer_to_def_in_defs.py str'}}",
+    "001": {
+        "NAME": "Бонк Бита",
+        "INFO": "Деревянная бита, которая делает *БОНК*",
+        
+        "DATA": {
+            "?TYPE": "WEAPON",
+            "STATS": {
+                "DMGTYPE": "FORCE",
+                "DMG": 10,
+                "MANA": null,
+                "DEFENCE": null
+            }
+        },
+        "?HAS_ABILITES": false,
+        "ABILITES": null
+    },
+    "002": {
+        "NAME": "Медальон Моршу",
+        "INFO": "Моршу сказал, что он пригодится.",
+        
+        "DATA": {
+            "?TYPE": "TALISMAN",
+            "STATS": {
+                "DMGTYPE": null,
+                "DMG": null,
+                "MANA": 5,
+                "DEFENCE": 10
+            }
+        },
+        "?HAS_ABILITES": false,
+        "ABILITES": null
+    },
+    "003": {
+        "NAME": "Шерстяная Накидка",
+        "INFO": "Теплая.",
+        
+        "DATA": {
+            "?TYPE": "ARMOR",
+            "STATS": {
+                "DMGTYPE": null,
+                "DMG": null,
+                "MANA": null,
+                "DEFENCE": 15
+            }
+        },
+        "?HAS_ABILITES": false,
+        "ABILITES": null
+    }
+}

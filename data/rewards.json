@@ -1,0 +1,50 @@
+{
+    "REFERRER": "./ref/rewards_referrer.json",
+    "FORMATION": {
+        "WARNING": "Please, don't touch this file and all other .json files, it is very dangerous! And it may even corrupt game's files!",
+        "ID": {
+            "ITEM_ID_GIVEN": "ITEM_ID",
+            "COINS": "INT"
+        }
+    },
+    "001": {
+        "ITEM_ID_GIVEN": "002",
+        "COINS": 10
+    },
+    "002": {
+        "ITEM_ID_GIVEN": null,
+        "COINS": 50
+    },
+    "003": {
+        "ITEM_ID_GIVEN": "001",
+        "COINS": 100
+    },
+    "004": {
+        "ITEM_ID_GIVEN": null,
+        "COINS": 50
+    },
+    "005": {
+        "ITEM_ID_GIVEN": "003",
+        "COINS": 90
+    },
+    "006": {
+        "ITEM_ID_GIVEN": null,
+        "COINS": 100
+    },
+    "007": {
+        "ITEM_ID_GIVEN": null,
+        "COINS": 150
+    },
+    "008": {
+        "ITEM_ID_GIVEN": null,
+        "COINS": 300
+    },
+    "009": {
+        "ITEM_ID_GIVEN": null,
+        "COINS": -50
+    },
+    "010": {
+        "ITEM_ID_GIVEN": null,
+        "COINS": 9999
+    }
+}

@@ -1,0 +1,230 @@
+{
+    "DEV": false,
+    "USERDATA": {
+        "?ALLOW_NEW_PROFILES": true,
+        "SLOT0": {
+            "?EMPTY": false,
+            "NAME": "DEV_TEST",
+            "SEED": "REVWX1RFU1QtMDAwLTExMS0yMjI=",
+            "ENDINGS_COMPLETED": {
+                "POSITIVE": false,
+                "NEGATIVE": false,
+                "MIDDLE": false,
+                "SHREK": false,
+                "OUTBREAK": false,
+                "SECRET": false,
+                "S_DEATH": false,
+                "TRUTH": false
+            },
+            "LOCATIONS VISITED": {
+                "FIELDS": true,
+                "BROKEN_TOWN": false,
+                "ABANDONED_FARMS": false,
+                "TEMPLE": false,
+                "MOUNT_VILLAGE": false,
+                "SUMMIT": false,
+                "LAB": false,
+                "HARDMODE_LOCS": {
+                    "HOPELESS_FIELDS": false,
+                    "REMNANTS_OF_TOWN": false,
+                    "BURNT_FARMS": false,
+                    "FORBIDDEN_TEMPLE": false,
+                    "HIGH_PEAKS": false,
+                    "LAST_SUMMIT": false,
+                    "CLONE_LAB": false
+                }
+            },
+            "DEATH_AMOUNT": 1,
+            "HM_ON": false,
+            "INV": "eyJTTE9UMSI6IHsiRU1QVFkiOiBmYWxzZSxJRCI6ICIwMDEifSwiU0xPVDIiOiB7IkVNUFRZIjogdHJ1ZSwiP0lEIjogbnVsbH0sIlNMT1QzIjogeyJFTVBUWSI6IGZhbHNlLCI/SUQiOiAiMDAyIn0=",
+            "CURRENT_LOCATION": "01"
+        }, "SLOT1": {
+            "?EMPTY": true,
+            "NAME": null,
+            "SEED": null,
+            "ENDINGS_COMPLETED": null,
+            "LOCATIONS VISITED": null,
+            "DEATH_AMOUNT": null,
+            "HM_ON": null,
+            "INV": null,
+            "CURRENT_LOCATION": null
+        }, "SLOT2": {
+            "?EMPTY": true,
+            "NAME": null,
+            "SEED": null,
+            "ENDINGS_COMPLETED": null,
+            "LOCATIONS VISITED": null,
+            "DEATH_AMOUNT": null,
+            "HM_ON": null,
+            "INV": null,
+            "CURRENT_LOCATION": null
+        }, "SLOT3": {
+            "?EMPTY": true,
+            "NAME": null,
+            "SEED": null,
+            "ENDINGS_COMPLETED": null,
+            "LOCATIONS VISITED": null,
+            "DEATH_AMOUNT": null,
+            "HM_ON": null,
+            "INV": null,
+            "CURRENT_LOCATION": null
+        }, "SLOT4": {
+            "?EMPTY": true,
+            "NAME": null,
+            "SEED": null,
+            "ENDINGS_COMPLETED": null,
+            "LOCATIONS VISITED": null,
+            "DEATH_AMOUNT": null,
+            "HM_ON": null,
+            "INV": null,
+            "CURRENT_LOCATION": null
+        }
+    },
+    "ITEMS" : {
+        "FORMAT": "ID: {'name': 'name', 'info': 'description', 'DATA': {'magdmg': int, 'edmg': int, 'fdmg': int, '?has_abilities': bool, 'abilities': 'refer_to_def_in_defs.py str'}}",
+        "001": {
+            "NAME": "Бонк Бита",
+            "INFO": "Деревянная бита, которая делает *БОНК*",
+            
+            "DATA": {
+                "?TYPE": "WEAPON",
+                "STATS": {
+                    "DMGTYPE": "FORCE",
+                    "DMG": 10,
+                    "MANA": null,
+                    "DEFENCE": null
+                }
+            },
+            "?HAS_ABILITES": false,
+            "ABILITES": null
+        },
+        "002": {
+            "NAME": "Медальон Моршу",
+            "INFO": "Моршу сказал, что он пригодится.",
+            
+            "DATA": {
+                "?TYPE": "TALISMAN",
+                "STATS": {
+                    "DMGTYPE": null,
+                    "DMG": null,
+                    "MANA": 5,
+                    "DEFENCE": 10
+                }
+            },
+            "?HAS_ABILITES": false,
+            "ABILITES": null
+        },
+        "003": {
+            "NAME": "Шерстяная Накидка",
+            "INFO": "Теплая.",
+            
+            "DATA": {
+                "?TYPE": "ARMOR",
+                "STATS": {
+                    "DMGTYPE": null,
+                    "DMG": null,
+                    "MANA": null,
+                    "DEFENCE": 15
+                }
+            },
+            "?HAS_ABILITES": false,
+            "ABILITES": null
+        }
+    },
+    "REWARDSDATA": {
+        "NO_REWARD_USERS": null,
+        "?HM_REWARDS_ANYWHERE": false,
+        "REWARDS": null
+    },
+    "QUESTDATA": {
+        "?DONT_GIVE_QUESTS": false,
+        "?ALLOW_REPEATING_QUESTS": false, 
+        "USERTRACKING": {
+            "SLOT0": {
+                "SHOWN_QUESTS": [0],
+                "ACTIVE_QUESTS": [0],
+                "COMPLETED_QUESTS": [0]
+            },
+            "SLOT1": {
+                "SHOWN_QUESTS": [null],
+                "ACTIVE_QUESTS": [null],
+                "COMPLETED_QUESTS": [null]
+            },
+            "SLOT2": {
+                "SHOWN_QUESTS": [null],
+                "ACTIVE_QUESTS": [null],
+                "COMPLETED_QUESTS": [null]
+            },
+            "SLOT3": {
+                "SHOWN_QUESTS": [null],
+                "ACTIVE_QUESTS": [null],
+                "COMPLETED_QUESTS": [null]
+            },
+            "SLOT4": {
+                "SHOWN_QUESTS": [null],
+                "ACTIVE_QUESTS": [null],
+                "COMPLETED_QUESTS": [null]
+            }
+        },
+        "QUESTS": [
+            {
+                "?SHOWN": true,
+                "?REWARD_ID": "001",
+                "QUEST_ID": "GET_AWAY_FROM_TOWN:1",
+                "NEXT_QUEST_ID": "GET_AWAY_FROM_TOWN:2"
+            },
+            {
+                "?REWARD_ID": "002",
+                "QUEST_ID": "GET_AWAY_FROM_TOWN:2",
+                "NEXT_QUEST_ID": "GET_AWAY_FROM_TOWN:3"
+            },
+            {
+                "?REWARD_ID": "003",
+                "QUEST_ID": "GET_AWAY_FROM_TOWN:3",
+                "NEXT_QUEST_ID": null
+            },
+            {
+                "?REWARD_ID": "004",
+                "QUEST_ID": "KILL_MONSTER",
+                "NEXT_QUEST_ID": null
+            },
+            {
+                "?REWARD_ID": "005",
+                "QUEST_ID": "LOOT_CHEST",
+                "NEXT_QUEST_ID": null
+            },
+            {
+                "?REWARD_ID": "006",
+                "QUEST_ID": "MEET_MORSHU_BROTHER:1",
+                "NEXT_QUEST_ID": "MEET_MORSHU_BROTHER:2"
+            },
+            {
+                "?REWARD_ID": "007",
+                "QUEST_ID": "MEET_MORSHU_BROTHER:2",
+                "NEXT_QUEST_ID": "SURVIVE_SIEGE:1"
+            },
+            {
+                "?REWARD_ID": "008",
+                "QUEST_ID": "SURVIVE_SIEGE:1",
+                "NEXT_QUEST_ID": "SURVIVE_SIEGE:2"
+            },
+            {
+                "?REWARD_ID": "009",
+                "QUEST_ID": "SURVIVE_SIEGE:1",
+                "NEXT_QUEST_ID": null
+            },
+            {
+                "?REWARD_ID": "010",
+                "QUEST_ID": "FILLER_TEST_IGNORE",
+                "NEXT_QUEST_ID": null
+            }
+        ]
+    
+    },
+    "OTHER_OBJECTS": {
+        "DIALOGUES": "dialogues.json",
+        "ITEMS": "items.json",
+        "LOCATIONS": "loc.json",
+        "REWARDS": "rewards.json"
+    }
+}

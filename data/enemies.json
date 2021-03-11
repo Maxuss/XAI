@@ -1,0 +1,103 @@
+{
+    "REFERRER": "./ref/enemy_referrer.json",
+    "BOSS_REFERRER": "./ref/boss_referrer.json",
+    "FORMATION": {
+        "MOB_ID": {
+            "NAME": "NAME",
+            "?TYPE": "NORMAL/RARE/BOSS",
+            "DATA": {
+                "DMG": "INT",
+                "TDMG": "INT",
+                "HP": "INT",
+                "DEF": "INT"
+            }
+        }
+    },
+    "MOBDATA": {
+        "NORMAL": {
+            "FIELDS": {
+                "TESTDUMMY": {
+                    "?TYPE": "UNSPAWNABLE_TOKEN",
+                    "NAME": "???Test!!!",
+                    "DATA": {
+                        "DMG": 5,
+                        "TDMG": 1,
+                        "HP": 99999999,
+                        "DEF": 10
+                    }
+                },
+                "PIG": {
+                    "NAME": "Свинья!",
+                    "?TYPE": "NORMAL",
+                    "DATA": {
+                        "DMG": 1,
+                        "TDMG": 0,
+                        "HP": 10,
+                        "DEF": 0
+                    }
+                },
+                "BOAR": {
+                    "NAME": "Кабан!",
+                    "?TYPE": "NORMAL",
+                    "DATA": {
+                        "DMG": 5,
+                        "TDMG": 0,
+                        "HP": 25,
+                        "DEF": 1
+                    }
+                },
+                "ZOMBIE": {
+                    "NAME": "Упырь!",
+                    "?TYPE": "NORMAL",
+                    "DATA": {
+                        "DMG": 6,
+                        "TDMG": 1,
+                        "HP": 30,
+                        "DEF": 2
+                    }
+                },
+                "POSSESSED": {
+                    "NAME": "Шаман!",
+                    "?TYPE": "NORMAL",
+                    "DATA": {
+                        "DMG": 3,
+                        "TDMG": 5,
+                        "HP": 30,
+                        "DEF": 0
+                    }
+                },
+                "BOAR_RIDER": {
+                    "NAME": "Упырь на кабане!",
+                    "?TYPE": "RARE",
+                    "DATA": {
+                        "DMG": 10,
+                        "TDMG": 0,
+                        "HP": 50,
+                        "DEF": 5
+                    }
+                },
+                "FIELD_MIMIC": {
+                    "NAME": "Сундук... Это же редкий полевой мимик!",
+                    "?TYPE": "RARE",
+                    "DATA": {
+                        "DMG": 15,
+                        "TDMG": 2,
+                        "HP": 75,
+                        "DEF": 1
+                    }
+                },
+                "BOSS:1": {
+                    "?REF_ID": "FIELD",
+                    "NAME": "Шрек!.. Погодите-ка, это же его злобный брат близнец: 'Огр-с-полей'!",
+                    "?TYPE": "BOSS",
+                    "DATA": {
+                        "DMG": 10,
+                        "TDMG": 5,
+                        "HP": 300,
+                        "DEF": 10
+                    }
+                }
+            }
+        }
+    }
+}
