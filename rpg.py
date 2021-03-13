@@ -3,9 +3,10 @@ import sys
 import os
 import exceptions as e
 import dev
+from decouple import config
 
 devmsg = dev.Dev.SendMessage()
-
+pathto = str(config("XAI_PATH"))
 devmsg("Setting up RPG module...")
 
 class RPG():
@@ -15,13 +16,13 @@ class RPG():
     
     def get_user_inv(self):
         devmsg("Getting user inv data...")
-        with open((sys.path[0] + "\\playerdata\\player1.json"), "r") as file:
+        with open((pathto + "\\playerdata\\player1.json"), "r") as file:
             userdata = json.load(file)
         inv = userdata["INV"]
         if inv is None:
             raise e.Fatals.CantFindPlayerDataFiles("PLAYER1.JSON IS EMPTY")
         else:
-            with open((sys.path[0] + "\\data\\items.json"), "r", encoding='utf-8') as file:
+            with open((pathto + "\\data\\items.json"), "r", encoding='utf-8') as file:
                 itemdata = json.load(file)
             for i in inv:
                 try:
@@ -34,14 +35,14 @@ class RPG():
         
 
     def start_up(self):
-        print("##########################\n")
-        print("#####================#####\n")
-        print("#####===-   XAI  -===#####\n")
-        print("#####================#####\n")
-        print("##########################\n")
+        print("##########################")
+        print("#####================#####")
+        print("#####===-   XAI  -===#####")
+        print("#####================#####")
+        print("##########################")
         print("Welcome to XAI!\n")
-        print("Введите 1 чтобы получить данные вашего инвентаря\n")
-        print("Введите 2 чтобы выйти\n")
+        print("Введите 1 чтобы получить данные вашего инвентаря")
+        print("Введите 2 чтобы выйти")
 
         answ = input("\Ваш ввод:\n")
 
@@ -51,5 +52,5 @@ class RPG():
         elif answ == "1":
             devmsg('User input = {"answ": "1"}')
             self.get_user_inv()
-
+        answ2 = input("\n")
     
