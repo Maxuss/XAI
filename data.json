@@ -1,6 +1,6 @@
 {
     "ANTI_EXPLOIT_REFERRER": "/ref/exploits/exploit_data.py",
-    "DEV": true,
+    "DEV": false,
     "ITEMS": {
         "001": {
             "?HAS_ABILITES": false,
