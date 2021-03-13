@@ -1,0 +1,182 @@
+{
+    "ANTI_EXPLOIT_REFERRER": "/ref/exploits/exploit_data.py",
+    "DEV": true,
+    "ITEMS": {
+        "001": {
+            "?HAS_ABILITES": false,
+            "ABILITES": null,
+            "DATA": {
+                "?TYPE": "WEAPON",
+                "STATS": {
+                    "DEFENCE": null,
+                    "DMG": 10,
+                    "DMGTYPE": "FORCE",
+                    "MANA": null
+                }
+            },
+            "INFO": "Деревянная бита, которая делает *БОНК*",
+            "NAME": "Бонк Бита"
+        },
+        "002": {
+            "?HAS_ABILITES": false,
+            "ABILITES": null,
+            "DATA": {
+                "?TYPE": "TALISMAN",
+                "STATS": {
+                    "DEFENCE": 10,
+                    "DMG": null,
+                    "DMGTYPE": null,
+                    "MANA": 5
+                }
+            },
+            "INFO": "Моршу сказал, что он пригодится.",
+            "NAME": "Медальон Моршу"
+        },
+        "003": {
+            "?HAS_ABILITES": false,
+            "ABILITES": null,
+            "DATA": {
+                "?TYPE": "ARMOR",
+                "STATS": {
+                    "DEFENCE": 15,
+                    "DMG": null,
+                    "DMGTYPE": null,
+                    "MANA": null
+                }
+            },
+            "INFO": "Теплая.",
+            "NAME": "Шерстяная Накидка"
+        },
+        "FORMAT": "ID: {'name': 'name', 'info': 'description', 'DATA': {'magdmg': int, 'edmg': int, 'fdmg': int, '?has_abilities': bool, 'abilities': 'refer_to_def_in_defs.py str'}}"
+    },
+    "OTHER_OBJECTS": {
+        "DIALOGUES": "dialogues.json",
+        "ITEMS": "items.json",
+        "LOCATIONS": "loc.json",
+        "REWARDS": "rewards.json"
+    },
+    "QUESTDATA": {
+        "?ALLOW_REPEATING_QUESTS": false,
+        "?DONT_GIVE_QUESTS": false,
+        "QUESTS": [
+            {
+                "?REWARD_ID": "001",
+                "?SHOWN": true,
+                "NEXT_QUEST_ID": "GET_AWAY_FROM_TOWN:2",
+                "QUEST_ID": "GET_AWAY_FROM_TOWN:1"
+            },
+            {
+                "?REWARD_ID": "002",
+                "NEXT_QUEST_ID": "GET_AWAY_FROM_TOWN:3",
+                "QUEST_ID": "GET_AWAY_FROM_TOWN:2"
+            },
+            {
+                "?REWARD_ID": "003",
+                "NEXT_QUEST_ID": null,
+                "QUEST_ID": "GET_AWAY_FROM_TOWN:3"
+            },
+            {
+                "?REWARD_ID": "004",
+                "NEXT_QUEST_ID": null,
+                "QUEST_ID": "KILL_MONSTER"
+            },
+            {
+                "?REWARD_ID": "005",
+                "NEXT_QUEST_ID": null,
+                "QUEST_ID": "LOOT_CHEST"
+            },
+            {
+                "?REWARD_ID": "006",
+                "NEXT_QUEST_ID": "MEET_MORSHU_BROTHER:2",
+                "QUEST_ID": "MEET_MORSHU_BROTHER:1"
+            },
+            {
+                "?REWARD_ID": "007",
+                "NEXT_QUEST_ID": "SURVIVE_SIEGE:1",
+                "QUEST_ID": "MEET_MORSHU_BROTHER:2"
+            },
+            {
+                "?REWARD_ID": "008",
+                "NEXT_QUEST_ID": "SURVIVE_SIEGE:2",
+                "QUEST_ID": "SURVIVE_SIEGE:1"
+            },
+            {
+                "?REWARD_ID": "009",
+                "NEXT_QUEST_ID": null,
+                "QUEST_ID": "SURVIVE_SIEGE:1"
+            },
+            {
+                "?REWARD_ID": "010",
+                "NEXT_QUEST_ID": null,
+                "QUEST_ID": "FILLER_TEST_IGNORE"
+            }
+        ],
+        "USERTRACKING": {
+            "SLOT0": {
+                "ACTIVE_QUESTS": [
+                    0
+                ],
+                "COMPLETED_QUESTS": [
+                    0
+                ],
+                "SHOWN_QUESTS": [
+                    0
+                ]
+            },
+            "SLOT1": {
+                "ACTIVE_QUESTS": [
+                    null
+                ],
+                "COMPLETED_QUESTS": [
+                    null
+                ],
+                "SHOWN_QUESTS": [
+                    null
+                ]
+            },
+            "SLOT2": {
+                "ACTIVE_QUESTS": [
+                    null
+                ],
+                "COMPLETED_QUESTS": [
+                    null
+                ],
+                "SHOWN_QUESTS": [
+                    null
+                ]
+            },
+            "SLOT3": {
+                "ACTIVE_QUESTS": [
+                    null
+                ],
+                "COMPLETED_QUESTS": [
+                    null
+                ],
+                "SHOWN_QUESTS": [
+                    null
+                ]
+            },
+            "SLOT4": {
+                "ACTIVE_QUESTS": [
+                    null
+                ],
+                "COMPLETED_QUESTS": [
+                    null
+                ],
+                "SHOWN_QUESTS": [
+                    null
+                ]
+            }
+        }
+    },
+    "REWARDSDATA": {
+        "?HM_REWARDS_ANYWHERE": false,
+        "NO_REWARD_USERS": null,
+        "REWARDS": null
+    },
+    "TEST": 0,
+    "USERS": {
+        "?ALLOW_NEW_PROFILES": true,
+        "?ANTI_EXPLOIT": true
+    }
+}
