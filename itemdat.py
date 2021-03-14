@@ -131,4 +131,3 @@ enemytest = {
                     }
                 }
 }
-Item.Use.battle(Item.Use, 1, enemytest["BOAR_RIDER"])
