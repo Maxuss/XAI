@@ -10,7 +10,6 @@
                 "STATS": {
                     "DMGTYPE": "FORCE",
                     "DMG": 10,
-                    "MANA": null,
                     "DEFENCE": null
                 }
             },
@@ -25,7 +24,7 @@
                 "?TYPE": "TALISMAN",
                 "STATS": {
                     "DMGTYPE": null,
-                    "DMG": null,
+                    "DMG": 0,
                     "MANA": 5,
                     "DEFENCE": 10
                 }
@@ -41,8 +40,7 @@
                 "?TYPE": "ARMOR",
                 "STATS": {
                     "DMGTYPE": null,
-                    "DMG": null,
-                    "MANA": null,
+                    "DMG": 0,
                     "DEFENCE": 15
                 }
             },
@@ -58,7 +56,6 @@
                 "STATS": {
                     "DMGTYPE": "FORCE",
                     "DMG": 25,
-                    "MANA": null,
                     "DEFENCE": 2
                 }
             },
@@ -75,7 +72,7 @@
                 "?TYPE": "CONSUMABLE",
                 "STATS": {
                     "DMGTYPE": null,
-                    "DMG": null,
+                    "DMG": 0,
                     "MANA": 1,
                     "DEFENCE": null
                 }
@@ -94,7 +91,6 @@
                 "STATS": {
                     "DMGTYPE": "FORCE",
                     "DMG": 15,
-                    "MANA": null,
                     "DEFENCE": 10
                 }
             },
@@ -109,8 +105,7 @@
                 "?TYPE": "ARMOR",
                 "STATS": {
                     "DMGTYPE": null,
-                    "DMG": null,
-                    "MANA": null,
+                    "DMG": 0,
                     "DEFENCE": 30
                 }
             },
@@ -129,8 +124,151 @@
                 "STATS": {
                     "DMGTYPE": "FIRE",
                     "DMG": 40,
-                    "MANA": null,
                     "DEFENCE": -2
+                }
+            },
+            "?HAS_ABILITES": false,
+            "ABILITES": null
+        },
+        "009": {
+            "NAME": "Мясницкий тесак",
+            "INFO": "Тяжелый и острый!",
+            
+            "DATA": {
+                "?TYPE": "WEAPON",
+                "STATS": {
+                    "DMGTYPE": "FORCE",
+                    "DMG": 50,
+                    "DEFENCE": 10
+                }
+            },
+            "?HAS_ABILITES": false,
+            "ABILITES": null
+        },
+        "010": {
+            "NAME": "Боевой молот.",
+            "INFO": "И откуда он у клона Моршу?",
+            
+            "DATA": {
+                "?TYPE": "WEAPON",
+                "STATS": {
+                    "DMGTYPE": "FIRE",
+                    "DMG": 60,
+                    "DEFENCE": -5
+                }
+            },
+            "?HAS_ABILITES": true,
+            "ABILITES": {
+                "MAIN": "Abilites.Weapons.hammer_hit(60)",
+                "PASSIVE": "Abilities.Weapons.slowdown()"
+            }
+        },
+        "011": {
+            "NAME": "Тяжелый бронежилет",
+            "INFO": "К апокалипсису готов!",
+            
+            "DATA": {
+                "?TYPE": "ARMOR",
+                "STATS": {
+                    "DMGTYPE": null,
+                    "DMG": 0,
+                    "DEFENCE": 50
+                }
+            },
+            "?HAS_ABILITES": true,
+            "ABILITES": {
+                "PASSIVE": "Abilities.Armor.bullet_shield()"
+            }
+        },
+        "012": {
+            "NAME": "Автомат КАКА-47",
+            "INFO": "Как АК, только хуже!",
+            
+            "DATA": {
+                "?TYPE": "WEAPON",
+                "STATS": {
+                    "DMGTYPE": "FIRE",
+                    "DMG": 70,
+                    "DEFENCE": -5
+                }
+            },
+            "?HAS_ABILITES": false,
+            "ABILITES": null
+        },
+        "013": {
+            "NAME": "Тяжелый пулемет",
+            "INFO": "Как его вообще поднять?!",
+            
+            "DATA": {
+                "?TYPE": "WEAPON",
+                "STATS": {
+                    "DMGTYPE": "FIRE",
+                    "DMG": 100,
+                    "DEFENCE": -10
+                }
+            },
+            "?HAS_ABILITES": true,
+            "ABILITES": {
+                "MAIN": "Abilites.Weapons.bullet_storm(50)"
+            }
+        },
+        "014": {
+            "NAME": "Ядовитые дротики",
+            "INFO": "Очень ядовитые!",
+            
+            "DATA": {
+                "?TYPE": "WEAPON",
+                "STATS": {
+                    "DMGTYPE": "THROW",
+                    "DMG": 90,
+                    "DEFENCE": 10
+                }
+            },
+            "?HAS_ABILITES": true,
+            "ABILITES": {
+                "PASSIVE": "Abilities.Weapons.poison_shield()"
+            }
+        },
+        "015": {
+            "NAME": "Монашья роба",
+            "INFO": "Бижутерия с кристаллами включена в набор!",
+            
+            "DATA": {
+                "?TYPE": "ARMOR",
+                "STATS": {
+                    "DMGTYPE": null,
+                    "DMG": 0,
+                    "DEFENCE": -5
+                }
+            },
+            "?HAS_ABILITES": false,
+            "ABILITES": null
+        },        
+        "016": {
+            "NAME": "Бронированный бронежилет",
+            "INFO": "Бронь!",
+            
+            "DATA": {
+                "?TYPE": "ARMOR",
+                "STATS": {
+                    "DMGTYPE": null,
+                    "DMG": 0,
+                    "DEFENCE": 5
+                }
+            },
+            "?HAS_ABILITES": false,
+            "ABILITES": null
+        },        
+        "017": {
+            "NAME": "Куча камней",
+            "INFO": "Груда камней",
+            
+            "DATA": {
+                "?TYPE": "WEAPON",
+                "STATS": {
+                    "DMGTYPE": "THROW",
+                    "DMG": 20,
+                    "DEFENCE": 0
                 }
             },
             "?HAS_ABILITES": false,
