@@ -1,6 +1,6 @@
 {
     "ANTI_EXPLOIT_REFERRER": "/ref/exploits/exploit_data.py",
-    "DEV": false,
+    "DEV": true,
     "REFERRER": {
         "DIALOGUES": "dialogues.json",
         "ITEMS": "items.json",
