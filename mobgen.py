@@ -7,3 +7,4 @@ import dev
 devmsg = dev.Dev.SendMessage()
 devmsg("Loading mobdata")
 pathto = str(config("XAI_PATH"))
+
