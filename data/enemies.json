@@ -3,98 +3,90 @@
     "BOSS_REFERRER": "./ref/boss_referrer.json",
     "FORMATION": {
         "MOB_ID": {
-            "NAME": "NAME",
+            "NAME": "Appear msg",
             "?TYPE": "NORMAL/RARE/BOSS",
+            "BATTLE_NAME": "name",
             "DATA": {
-                "DMG": "INT",
-                "TDMG": "INT",
-                "HP": "INT",
-                "DEF": "INT"
+                "DMG": "INTNT",
+                "MAX_HP": "INT",
+                "CURRENT_HP": "INT"
+        
             }
         }
     },
     "MOBDATA": {
         "NORMAL": {
             "FIELDS": {
-                "TESTDUMMY": {
-                    "?TYPE": "UNSPAWNABLE_TOKEN",
-                    "NAME": "???Test!!!",
-                    "DATA": {
-                        "DMG": 5,
-                        "TDMG": 1,
-                        "HP": 99999999,
-                        "DEF": 10
-                    }
-                },
                 "PIG": {
                     "NAME": "Свинья!",
+                    "BATTLE_NAME": "свинья",
                     "?TYPE": "NORMAL",
                     "DATA": {
                         "DMG": 1,
-                        "TDMG": 0,
-                        "HP": 10,
-                        "DEF": 0
+                        "MAX_HP": 10,
+                        "CURRENT_HP": 10
                     }
                 },
                 "BOAR": {
                     "NAME": "Кабан!",
+                    "BATTLE_NAME": "кабан",
                     "?TYPE": "NORMAL",
                     "DATA": {
                         "DMG": 5,
-                        "TDMG": 0,
-                        "HP": 25,
-                        "DEF": 1
+                        "MAX_HP": 25,
+                        "CURRENT_HP": 25
                     }
                 },
                 "ZOMBIE": {
                     "NAME": "Упырь!",
+                    "BATTLE_NAME": "упырь",
                     "?TYPE": "NORMAL",
                     "DATA": {
                         "DMG": 6,
-                        "TDMG": 1,
-                        "HP": 30,
-                        "DEF": 2
+                        "MAX_HP": 30,
+                        "CURRENT_HP": 30
                     }
                 },
                 "POSSESSED": {
                     "NAME": "Шаман!",
+                    "BATTLE_NAME": "шаман",
                     "?TYPE": "NORMAL",
                     "DATA": {
                         "DMG": 3,
-                        "TDMG": 5,
-                        "HP": 30,
-                        "DEF": 0
+                        "MAX_HP": 30,
+                        "CURRENT_HP": 30
                     }
                 },
                 "BOAR_RIDER": {
                     "NAME": "Упырь на кабане!",
+                    "BATTLE_NAME": "упырь-наездник",
                     "?TYPE": "RARE",
                     "DATA": {
                         "DMG": 10,
-                        "TDMG": 0,
-                        "HP": 50,
-                        "DEF": 5
+                        "MAX_HP": 50,
+                        "CURRENT_HP": 50
                     }
                 },
                 "FIELD_MIMIC": {
                     "NAME": "Сундук... Это же редкий полевой мимик!",
+                    "BATTLE_NAME": "мимик",
                     "?TYPE": "RARE",
                     "DATA": {
                         "DMG": 15,
-                        "TDMG": 2,
-                        "HP": 75,
-                        "DEF": 1
+                        "MAX_HP": 75,
+                        "CURRENT_HP": 75
                     }
                 },
                 "BOSS:1": {
                     "?REF_ID": "FIELD",
                     "NAME": "Шрек!.. Погодите-ка, это же его злобный брат близнец: 'Огр-с-полей'!",
                     "?TYPE": "BOSS",
+                    "BATTLE_NAME": "шрек",
                     "DATA": {
                         "DMG": 10,
-                        "TDMG": 5,
-                        "HP": 300,
-                        "DEF": 10
+                        "MAX_HP": 300,
+                        "CURRENT_HP": 300
+                        
                     }
                 }
             }
