@@ -1,55 +1,7 @@
 {
     "ANTI_EXPLOIT_REFERRER": "/ref/exploits/exploit_data.py",
-    "DEV": false,
-    "ITEMS": {
-        "001": {
-            "?HAS_ABILITES": false,
-            "ABILITES": null,
-            "DATA": {
-                "?TYPE": "WEAPON",
-                "STATS": {
-                    "DEFENCE": null,
-                    "DMG": 10,
-                    "DMGTYPE": "FORCE",
-                    "MANA": null
-                }
-            },
-            "INFO": "Деревянная бита, которая делает *БОНК*",
-            "NAME": "Бонк Бита"
-        },
-        "002": {
-            "?HAS_ABILITES": false,
-            "ABILITES": null,
-            "DATA": {
-                "?TYPE": "TALISMAN",
-                "STATS": {
-                    "DEFENCE": 10,
-                    "DMG": null,
-                    "DMGTYPE": null,
-                    "MANA": 5
-                }
-            },
-            "INFO": "Моршу сказал, что он пригодится.",
-            "NAME": "Медальон Моршу"
-        },
-        "003": {
-            "?HAS_ABILITES": false,
-            "ABILITES": null,
-            "DATA": {
-                "?TYPE": "ARMOR",
-                "STATS": {
-                    "DEFENCE": 15,
-                    "DMG": null,
-                    "DMGTYPE": null,
-                    "MANA": null
-                }
-            },
-            "INFO": "Теплая.",
-            "NAME": "Шерстяная Накидка"
-        },
-        "FORMAT": "ID: {'name': 'name', 'info': 'description', 'DATA': {'magdmg': int, 'edmg': int, 'fdmg': int, '?has_abilities': bool, 'abilities': 'refer_to_def_in_defs.py str'}}"
-    },
-    "OTHER_OBJECTS": {
+    "DEV": true,
+    "REFERRER": {
         "DIALOGUES": "dialogues.json",
         "ITEMS": "items.json",
         "LOCATIONS": "loc.json",

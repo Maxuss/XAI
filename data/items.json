@@ -1,51 +1,140 @@
 {
     "FORMAT": "ID: {'name': 'name', 'info': 'description', 'DATA': {'magdmg': int, 'edmg': int, 'fdmg': int, '?has_abilities': bool, 'abilities': 'refer_to_def_in_defs.py str'}}",
-    "001": {
-        "NAME": "Бонк Бита",
-        "INFO": "Деревянная бита, которая делает *БОНК*",
-        
-        "DATA": {
-            "?TYPE": "WEAPON",
-            "STATS": {
-                "DMGTYPE": "FORCE",
-                "DMG": 10,
-                "MANA": null,
-                "DEFENCE": null
+    "ITEMDATA": {
+        "001": {
+            "NAME": "Бонк Бита",
+            "INFO": "Деревянная бита, которая делает *БОНК*",
+            
+            "DATA": {
+                "?TYPE": "WEAPON",
+                "STATS": {
+                    "DMGTYPE": "FORCE",
+                    "DMG": 10,
+                    "MANA": null,
+                    "DEFENCE": null
+                }
+            },
+            "?HAS_ABILITES": false,
+            "ABILITES": null
+        },
+        "002": {
+            "NAME": "Медальон Моршу",
+            "INFO": "Моршу сказал, что он пригодится.",
+            
+            "DATA": {
+                "?TYPE": "TALISMAN",
+                "STATS": {
+                    "DMGTYPE": null,
+                    "DMG": null,
+                    "MANA": 5,
+                    "DEFENCE": 10
+                }
+            },
+            "?HAS_ABILITES": false,
+            "ABILITES": null
+        },
+        "003": {
+            "NAME": "Шерстяная Накидка",
+            "INFO": "Теплая.",
+            
+            "DATA": {
+                "?TYPE": "ARMOR",
+                "STATS": {
+                    "DMGTYPE": null,
+                    "DMG": null,
+                    "MANA": null,
+                    "DEFENCE": 15
+                }
+            },
+            "?HAS_ABILITES": false,
+            "ABILITES": null
+        },
+        "004": {
+            "NAME": "Железный фальшион",
+            "INFO": "Крайне острый клинок из музея, становящийся толще к концу лезвия.",
+            
+            "DATA": {
+                "?TYPE": "WEAPON",
+                "STATS": {
+                    "DMGTYPE": "FORCE",
+                    "DMG": 25,
+                    "MANA": null,
+                    "DEFENCE": 2
+                }
+            },
+            "?HAS_ABILITES": true,
+            "ABILITES": {
+                "MAIN": "Abilites.Weapons.falch_hit()"
             }
         },
-        "?HAS_ABILITES": false,
-        "ABILITES": null
-    },
-    "002": {
-        "NAME": "Медальон Моршу",
-        "INFO": "Моршу сказал, что он пригодится.",
-        
-        "DATA": {
-            "?TYPE": "TALISMAN",
-            "STATS": {
-                "DMGTYPE": null,
-                "DMG": null,
-                "MANA": 5,
-                "DEFENCE": 10
+        "005": {
+            "NAME": "Банка с Водой",
+            "INFO": "Все еще закрытая",
+            
+            "DATA": {
+                "?TYPE": "CONSUMABLE",
+                "STATS": {
+                    "DMGTYPE": null,
+                    "DMG": null,
+                    "MANA": 1,
+                    "DEFENCE": null
+                }
+            },
+            "?HAS_ABILITES": true,
+            "ABILITES": {
+                "MAIN": "Abilities.Consumables.drink()"
             }
         },
-        "?HAS_ABILITES": false,
-        "ABILITES": null
-    },
-    "003": {
-        "NAME": "Шерстяная Накидка",
-        "INFO": "Теплая.",
-        
-        "DATA": {
-            "?TYPE": "ARMOR",
-            "STATS": {
-                "DMGTYPE": null,
-                "DMG": null,
-                "MANA": null,
-                "DEFENCE": 15
+        "006": {
+            "NAME": "Золотое лезвие",
+            "INFO": "Несмотря на свою крастоу крайне неудобный для использования.",
+            
+            "DATA": {
+                "?TYPE": "WEAPON",
+                "STATS": {
+                    "DMGTYPE": "FORCE",
+                    "DMG": 15,
+                    "MANA": null,
+                    "DEFENCE": 10
+                }
+            },
+            "?HAS_ABILITES": false,
+            "ABILITES": null
+        },
+        "007": {
+            "NAME": "Легкий бронежилет",
+            "INFO": "Тяжелый.",
+            
+            "DATA": {
+                "?TYPE": "ARMOR",
+                "STATS": {
+                    "DMGTYPE": null,
+                    "DMG": null,
+                    "MANA": null,
+                    "DEFENCE": 30
+                }
+            },
+            "?HAS_ABILITES": true,
+            "ABILITES": {
+                "MAIN": null,
+                "PASSIVE": "Abilities.Armor.bullet_shield()"
             }
         },
-        "?HAS_ABILITES": false,
-        "ABILITES": null
+        "008": {
+            "NAME": "Малый пистолет",
+            "INFO": "Есть много патронов!",
+            
+            "DATA": {
+                "?TYPE": "WEAPON",
+                "STATS": {
+                    "DMGTYPE": "FIRE",
+                    "DMG": 40,
+                    "MANA": null,
+                    "DEFENCE": -2
+                }
+            },
+            "?HAS_ABILITES": false,
+            "ABILITES": null
+        }
     }
 }
