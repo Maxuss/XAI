@@ -88,7 +88,7 @@
             {
                 "?REWARD_ID": "009",
                 "NEXT_QUEST_ID": null,
-                "QUEST_ID": "SURVIVE_SIEGE:1",
+                "QUEST_ID": "SURVIVE_SIEGE:2",
                 "REF": "q009.py"
             },
             {
