@@ -1,7 +1,7 @@
 {
     "?EMPTY": false,
     "NAME": "DEV_TEST",
-    "SEED": "DEV_TEST-1278-2381-d$z$g",
+    "SEED": "144840213948123",
     "ENDINGS_COMPLETED": {
         "POSITIVE": false,
         "NEGATIVE": false,
@@ -38,5 +38,26 @@
         "003"
     ],
     "CURRENT_LOCATION": "01",
-    "BALANCE": 999
+    "BALANCE": 999,
+    "ENEMIES_SLAIN": {
+        "NORMAL": {
+            "FIELDS": 5,
+            "BROKEN_TOWN": 0,
+            "ABANDONED_FARMS": 0,
+            "TEMPLE": 0,
+            "MOUNT_VILLAGE": 0,
+            "SUMMIT": 0,
+            "LAB": 0
+        },
+        "HM": {
+            "HOPELESS_FIELDS": 0,
+            "REMNANTS_OF_TOWN": 0,
+            "BURNT_FARMS": 0,
+            "FORBIDDEN_TEMPLE": 0,
+            "HIGH_PEAKS": 0,
+            "LAST_SUMMIT": 0,
+            "CLONE_LAB": 0,
+            "STRONGHOLD": 0
+        }
+    }
 }

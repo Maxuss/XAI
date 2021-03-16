@@ -12,7 +12,7 @@ import rpg as r
 devmode = dev.devmode
 devmsg = dev.Dev.SendMessage()
 
-devmsg("Starting...")
+devmsg("Starting...") 
 
 Exploiter = ae.ExploitCheck()
 

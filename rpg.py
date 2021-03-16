@@ -56,8 +56,13 @@ class RPG():
         print("Введите 1 чтобы начать")
         print("Введите 2 чтобы выйти")
         profstr = "Профиль 1 - " + prof["prof1"] + "\nПрофиль 2 - " + prof["prof2"] + "\nПрофиль 3 - " + prof["prof3"]
-        answ = input("\Ваш ввод:\n")
-
+        filet = True
+        while filet is True:
+            try:
+                answ = input("Ваш ввод:\n")
+                filet = False
+            except ValueError:
+                print("Это не число!")
         if answ == "2":
             devmsg("Exiting...")
             exit()
@@ -66,7 +71,16 @@ class RPG():
             print("Вы выбрали начать.")
             print("Введите номер профиля для открытия/создания. Если профиль полон, то он будет открыт, иначе он будет создан.")
             print(profstr)
-            profile_chosen = int(input("Введите номер профиля...\n"))
+            filet = True
+            while filet is True:
+                try:
+                    profile_chosen = int(input("Введите номер профиля...\n"))
+                    if profile_chosen == "":
+                        raise ValueError
+                    filet = False
+                except ValueError:
+                    print("Это не число!")
+            
             devmsg(f"User chose to open profile{profile_chosen}.json")
             devmsg("Trying to open profile data...")
         if profile_chosen >= 1 and profile_chosen <= 3:
@@ -84,7 +98,14 @@ class RPG():
         print("1 - просмотреть инвентарь")
         print("2 - добавить предметы в инвентарь (не стабильно). Предметы - это ID с 001 до 008 включительно.")
         print("3 - выйти.")
-        answ = int(input("Введите число."))
+        filet = True
+        while filet is True:
+            try:
+                answ = int(input("Введите число."))
+                filet = False
+            except ValueError:
+                print("Это не число!")
+            
         if answ == 3:
             devmsg("Closing...")
             exit()
@@ -96,8 +117,8 @@ class RPG():
 
 
     class Profile():
-        def __call__(self, slotnum):
-            self.new_profile(self, slotnum)
+        def __call__(self, slotnum, playername):
+            self.new_profile(slotnum, playername)
             pass
         
         sample_profile_data = {
@@ -134,9 +155,29 @@ class RPG():
             "HM_ON": False,
             "INV": [],
             "CURRENT_LOCATION": "00",
-            "BALANCE": 0
+            "BALANCE": 0,
+            "ENEMIES_SLAIN": {
+                "NORMAL": {
+                "FIELDS": 0,
+                "BROKEN_TOWN": 0,
+                "ABANDONED_FARMS": 0,
+                "TEMPLE": 0,
+                "MOUNT_VILLAGE": 0,
+                "SUMMIT": 0,
+                "LAB": 0
+            },
+            "HM": {
+                "HOPELESS_FIELDS": 0,
+                "REMNANTS_OF_TOWN": 0,
+                "BURNT_FARMS": 0,
+                "FORBIDDEN_TEMPLE": 0,
+                "HIGH_PEAKS": 0,
+                "LAST_SUMMIT": 0,
+                "CLONE_LAB": 0,
+                "STRONGHOLD": 0
+            }
         }
-
+    }
         def new_profile(self, slotnum:int):
             if slotnum >= 0 and slotnum <= 3:
                 with open((pathto + f"\\playerdata\\player{slotnum}.json"), "r") as file:
@@ -144,7 +185,7 @@ class RPG():
                     profiledata = json.load(file)
                 isempty = profiledata["?EMPTY"]
                 if not isempty:
-                    devmsg(f"Cant override an existing file {slotnum}")
+                    devmsg(f"Cant overwrite an existing file with number '{slotnum}'")
                     devmsg("Looking for solution...")
                     time.sleep(1)
                     with open((pathto + f"\\playerdata\\player{slotnum}.json"), "r") as file:
@@ -152,10 +193,12 @@ class RPG():
                         profiledata = json.load(file)
                     return profiledata
                 else:
+                    playername = input("Введите имя нового персонажа\n")
+                    self.Profile.sample_profile_data["NAME"] = playername.capitalize()
                     devmsg(f"Dumping sample data into existing json file...")
-                    with open((pathto + f"\\playerdata\\player{slotnum}.json"), "w") as file:
+                    with open((pathto + f"\\playerdata\\player{slotnum}.json"), "w", encoding="utf-8") as file:
                         json.dump(self.Profile.sample_profile_data, file, indent=4, sort_keys=True, ensure_ascii=False)
-                    with open((pathto + f"\\playerdata\\player{slotnum}.json"), "r") as file:
+                    with open((pathto + f"\\playerdata\\player{slotnum}.json"), "r", encoding='utf-8') as file:
                         profiledata = json.load(file)
                         return profiledata
             else:

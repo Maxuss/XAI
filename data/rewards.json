@@ -1,50 +1,51 @@
 {
-    "REFERRER": "./ref/rewards_referrer.json",
-    "FORMATION": {
-        "WARNING": "Please, don't touch this file and all other .json files, it is very dangerous! And it may even corrupt game's files!",
-        "ID": {
-            "ITEM_ID_GIVEN": "ITEM_ID",
-            "COINS": "INT"
-        }
-    },
     "001": {
-        "ITEM_ID_GIVEN": "002",
-        "COINS": 10
+        "COINS": 10,
+        "ITEM_ID_GIVEN": "002"
     },
     "002": {
-        "ITEM_ID_GIVEN": null,
-        "COINS": 50
+        "COINS": 50,
+        "ITEM_ID_GIVEN": null
     },
     "003": {
-        "ITEM_ID_GIVEN": "001",
-        "COINS": 100
+        "COINS": 100,
+        "ITEM_ID_GIVEN": "001"
     },
     "004": {
-        "ITEM_ID_GIVEN": null,
-        "COINS": 50
+        "COINS": 50,
+        "ITEM_ID_GIVEN": null
     },
     "005": {
-        "ITEM_ID_GIVEN": "003",
-        "COINS": 90
+        "COINS": 90,
+        "ITEM_ID_GIVEN": "003"
     },
     "006": {
-        "ITEM_ID_GIVEN": null,
-        "COINS": 100
+        "COINS": 100,
+        "ITEM_ID_GIVEN": null
     },
     "007": {
-        "ITEM_ID_GIVEN": null,
-        "COINS": 150
+        "COINS": 150,
+        "ITEM_ID_GIVEN": null
     },
     "008": {
-        "ITEM_ID_GIVEN": null,
-        "COINS": 300
+        "COINS": 300,
+        "ITEM_ID_GIVEN": null
     },
     "009": {
-        "ITEM_ID_GIVEN": null,
-        "COINS": -50
+        "COINS": -50,
+        "ITEM_ID_GIVEN": null
     },
     "010": {
-        "ITEM_ID_GIVEN": null,
-        "COINS": 9999
-    }
+        "COINS": 9999,
+        "ITEM_ID_GIVEN": null
+    },
+    "COINS": 0,
+    "FORMATION": {
+        "ID": {
+            "COINS": "INT",
+            "ITEM_ID_GIVEN": "ITEM_ID"
+        },
+        "WARNING": "Please, don't touch this file and all other .json files, it is very dangerous! And it may even corrupt game's files!"
+    },
+    "REFERRER": "./ref/rewards_referrer.json"
 }
