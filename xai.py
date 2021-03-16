@@ -2,7 +2,6 @@ import exceptions
 import anti_exploit as ae
 import dev
 import loot_gen
-import mobgen
 import json
 import os
 import sys

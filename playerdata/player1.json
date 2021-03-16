@@ -1,7 +1,6 @@
 {
     "?EMPTY": false,
     "NAME": "DEV_TEST",
-    "SEED": "144840213948123",
     "ENDINGS_COMPLETED": {
         "POSITIVE": false,
         "NEGATIVE": false,
@@ -13,6 +12,7 @@
         "TRUTH": false
     },
     "LOCATIONS VISITED": {
+        "NORMAL_START": true,
         "FIELDS": true,
         "BROKEN_TOWN": false,
         "ABANDONED_FARMS": false,
@@ -21,6 +21,7 @@
         "SUMMIT": false,
         "LAB": false,
         "HARDMODE_LOCS": {
+            "HM_START": false,
             "HOPELESS_FIELDS": false,
             "REMNANTS_OF_TOWN": false,
             "BURNT_FARMS": false,
@@ -37,7 +38,7 @@
         "002",
         "003"
     ],
-    "CURRENT_LOCATION": "01",
+    "CURRENT_LOCATION": "FIELDS",
     "BALANCE": 999,
     "ENEMIES_SLAIN": {
         "NORMAL": {

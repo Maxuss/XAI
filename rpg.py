@@ -5,6 +5,7 @@ import exceptions as e
 import dev
 from decouple import config
 import time
+import itemdat
 devmsg = dev.Dev.SendMessage()
 pathto = str(config("XAI_PATH"))
 devmsg("Setting up RPG module...")
@@ -48,10 +49,15 @@ class RPG():
                 prof[f"prof{i}"] = 'пуст'
         profstr = "Профиль 1 - " + prof["prof1"] + "\nПрофиль 2 - " + prof["prof2"] + "\nПрофиль 3 - " + prof["prof3"]
         print("##########################")
+        time.sleep(0.5)
         print("#####================#####")
+        time.sleep(0.5)
         print("#####===-   XAI  -===#####")
+        time.sleep(0.5)
         print("#####================#####")
+        time.sleep(0.5)
         print("##########################")
+        time.sleep(0.5)
         print("Welcome to XAI!\n")
         print("Введите 1 чтобы начать")
         print("Введите 2 чтобы выйти")
@@ -97,22 +103,26 @@ class RPG():
         print("Доступные функции:")
         print("1 - просмотреть инвентарь")
         print("2 - добавить предметы в инвентарь (не стабильно). Предметы - это ID с 001 до 008 включительно.")
-        print("3 - выйти.")
+        print("3 - начать битву")
+        print("4 - выйти.")
         filet = True
         while filet is True:
             try:
-                answ = int(input("Введите число."))
+                answ = int(input("Введите число.\n"))
                 filet = False
             except ValueError:
                 print("Это не число!")
             
-        if answ == 3:
+        if answ == 4:
             devmsg("Closing...")
             exit()
         elif answ == 2:
             self.Profile.give(self, profile_chosen)
         elif answ == 1:
             self.get_user_inv(profile_chosen)
+        elif answ == 3:
+            enemy = itemdat.generate_random_mob(itemdat.Item.Use.GetPlayerLocation(profile_chosen), profile_chosen)
+            itemdat.Item.Use.battle(itemdat.Item.Use, profile_chosen, enemy)
         answ2 = input("\n")
 
 

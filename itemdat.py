@@ -4,6 +4,7 @@ import os
 from decouple import config
 import dev
 import time
+import random
 
 pathto = str(config("XAI_PATH"))
 devmsg = dev.Dev.SendMessage()
@@ -42,8 +43,14 @@ class Item():
                     nd = {f"{item}": itemdata[item]}
                     player_items.update(nd)
             return player_items
-            
-        def turn(self, enemyhp:int, enemymhp:int, enemydmg:int, pehp:int, enemyname:str, enemybname:str, filler:bool, enemy:dict, pdmg:int):
+
+        def GetPlayerLocation(profile:int):
+            with open((pathto + f"\\playerdata\\player{profile}.json"), "r") as file:
+                player = json.load(file)
+            location = player["CURRENT_LOCATION"]
+            return location
+
+        def turn(self, pehp:int, filler:bool, enemy:dict, pdmg:int, loc:str, profile):
             print("Следующий ход!\n")
             devmsg("Initializing next turn...")
             # turn
@@ -51,10 +58,12 @@ class Item():
             enemyhp = enemy["DATA"]["CURRENT_HP"]
             enemymhp = enemy["DATA"]["MAX_HP"]
             enemydmg = enemy["DATA"]["DMG"]
+            enemybname = enemy["BATTLE_NAME"]
+            enemyname = enemy["NAME"]
+            print(f"Вам встречается {enemyname}")
             while pehp > 0:
                 enemyhp -= pdmg
                 pehp -= enemydmg
-                time.sleep(1)
                 print(f"{enemybname.capitalize()} атаковал вас на {enemydmg} урона, а вы нанесли ему {pdmg} единиц урона.")
                 if enemyhp > 0:
                     print(f"Здоровье {enemybname}а: {enemyhp}/{enemymhp}.")
@@ -74,11 +83,13 @@ class Item():
             else:
                 filler = True
                 pass
+            self.battle(self, profile, enemy)
 
             
         def battle(self, profile:int, enemy):
             itemdata = ParseItemJSON()
             player_items = self.GetPlayerItems(itemdata, profile)
+            location = self.GetPlayerLocation(profile)
             self._pdata = player_items
             self._idata = itemdata
             devmsg("Successfully gotten player's itemdata!")
@@ -102,32 +113,31 @@ class Item():
             enemyname = enemy["NAME"]
             enemybname = enemy["BATTLE_NAME"]
             devmsg("Starting battle...")
-            print("Вам встречается " + enemyname)
-            print(round(pdef/3))
             pehp = 100 + round(pdef / 2) # Players effective HP (True HP)
             enemyhp = enemy["DATA"]["CURRENT_HP"]
             enemymhp = enemy["DATA"]["MAX_HP"]
             enemyhp -= pdmg
             enemydmg = enemy["DATA"]["DMG"]
             pehp -= enemydmg
-
-            time.sleep(1)
-
-            print(f"{enemybname.capitalize()} атаковал вас на {enemydmg} урона, а вы нанесли ему {pdmg} единиц урона.")
-            print(f"Здоровье {enemybname}а: {enemyhp}/{enemymhp}.")
-            print("Начинается битва!\n")
             filler = True
-            self.turn(self, enemyhp, enemymhp, enemydmg, pehp, enemyname, enemybname, filler, enemy, pdmg)
-            enter = input("Вы победили!")
-enemytest = {
-                "BOAR_RIDER": {
-                    "NAME": "Упырь на кабане!",
-                    "BATTLE_NAME": "упырь-наездник",
-                    "?TYPE": "RARE",
-                    "DATA": {
-                        "DMG": 10,
-                        "MAX_HP": 50,
-                        "CURRENT_HP": 50
-                    }
-                }
-}
+            enter = input("Нажмите любую кнопку для начала битвы\n")
+            enemy = generate_random_mob(location, profile)
+            self.turn(self, pehp, filler, enemy, pdmg, location, profile)
+
+attack = Item.Use.battle
+next_turn = Item.Use.turn
+
+def generate_random_mob(LOCATION:str, playernum):
+    with open((pathto + f'\\playerdata\\player{playernum}.json'), 'r', encoding='utf-8') as file:
+        playerdata = json.load(file)
+    with open((pathto + '\\data\\enemies.json'), 'r', encoding='utf-8') as file:
+        mobdata = json.load(file)
+    devmsg("Getting mob data...")
+    mobs_to_choose = list(mobdata["MOBDATA"]["NORMAL"][LOCATION].keys())
+    chosen = random.choice(mobs_to_choose)
+    while "BOSS" in str(chosen):
+        devmsg("Chosen mob is a boss! Rerolling...")
+        chosen = random.choice(mobs_to_choose)
+    tc = mobdata["MOBDATA"]["NORMAL"][LOCATION][chosen]
+    devmsg(f"Chosen the mob with key '{chosen}'")
+    return tc

@@ -1,6 +1,9 @@
 import os
 import sys
 import json
+from decouple import config
+
+pathto = str(config("XAI_PATH"))
 
 with open('data.json', 'r') as file:
     data = json.load(file)
@@ -18,4 +21,3 @@ class Dev():
             self.fullmsg = self.msgstart + message
             if devmode:
                 print(self.fullmsg)
-
