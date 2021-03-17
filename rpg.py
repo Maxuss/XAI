@@ -218,13 +218,13 @@ class RPG():
                 raise e.Fatals.CantFindDataFiles("Профиль не существует")
         
         def give(self, profile):
-            with open((pathto + f"\\playerdata\\player{profile}.json"), "r") as file:
+            with open((pathto + f"\\playerdata\\player{profile}.json"), "r", encoding='utf-8') as file:
                 devmsg(f"Loading profile with number {profile}...")
                 profiledata = json.load(file)
             print("Выберите айди предмета, чтобы дать персонажу. АЙДИ доступны с 001 до 008")
             id_item = input("Введите айди\n")
             try:
-                with open((pathto + "\\data\\items.json"), "r") as file:
+                with open((pathto + "\\data\\items.json"), "r", encoding='utf-8') as file:
                     devmsg("Opening itemdata...")
                     itemd = json.load(file)
                     itemdata = itemd["ITEMDATA"]

@@ -1,64 +1,65 @@
 {
     "?EMPTY": false,
-    "NAME": "DEV_TEST",
+    "BALANCE": 999,
+    "CURRENT_LOCATION": "FIELDS",
+    "DEATH_AMOUNT": 1,
     "ENDINGS_COMPLETED": {
-        "POSITIVE": false,
-        "NEGATIVE": false,
         "MIDDLE": false,
-        "SHREK": false,
+        "NEGATIVE": false,
         "OUTBREAK": false,
+        "POSITIVE": false,
         "SECRET": false,
+        "SHREK": false,
         "S_DEATH": false,
         "TRUTH": false
     },
-    "LOCATIONS VISITED": {
-        "NORMAL_START": true,
-        "FIELDS": true,
-        "BROKEN_TOWN": false,
-        "ABANDONED_FARMS": false,
-        "TEMPLE": false,
-        "MOUNT_VILLAGE": false,
-        "SUMMIT": false,
-        "LAB": false,
-        "HARDMODE_LOCS": {
-            "HM_START": false,
-            "HOPELESS_FIELDS": false,
-            "REMNANTS_OF_TOWN": false,
-            "BURNT_FARMS": false,
-            "FORBIDDEN_TEMPLE": false,
-            "HIGH_PEAKS": false,
-            "LAST_SUMMIT": false,
-            "CLONE_LAB": false
+    "ENEMIES_SLAIN": {
+        "HM": {
+            "BURNT_FARMS": 0,
+            "CLONE_LAB": 0,
+            "FORBIDDEN_TEMPLE": 0,
+            "HIGH_PEAKS": 0,
+            "HOPELESS_FIELDS": 0,
+            "LAST_SUMMIT": 0,
+            "REMNANTS_OF_TOWN": 0,
+            "STRONGHOLD": 0
+        },
+        "NORMAL": {
+            "ABANDONED_FARMS": 0,
+            "BROKEN_TOWN": 0,
+            "FIELDS": 5,
+            "LAB": 0,
+            "MOUNT_VILLAGE": 0,
+            "SUMMIT": 0,
+            "TEMPLE": 0
         }
     },
-    "DEATH_AMOUNT": 1,
     "HM_ON": false,
     "INV": [
         "001",
         "002",
-        "003"
+        "003",
+        "004"
     ],
-    "CURRENT_LOCATION": "FIELDS",
-    "BALANCE": 999,
-    "ENEMIES_SLAIN": {
-        "NORMAL": {
-            "FIELDS": 5,
-            "BROKEN_TOWN": 0,
-            "ABANDONED_FARMS": 0,
-            "TEMPLE": 0,
-            "MOUNT_VILLAGE": 0,
-            "SUMMIT": 0,
-            "LAB": 0
+    "LOCATIONS VISITED": {
+        "ABANDONED_FARMS": false,
+        "BROKEN_TOWN": false,
+        "FIELDS": true,
+        "HARDMODE_LOCS": {
+            "BURNT_FARMS": false,
+            "CLONE_LAB": false,
+            "FORBIDDEN_TEMPLE": false,
+            "HIGH_PEAKS": false,
+            "HM_START": false,
+            "HOPELESS_FIELDS": false,
+            "LAST_SUMMIT": false,
+            "REMNANTS_OF_TOWN": false
         },
-        "HM": {
-            "HOPELESS_FIELDS": 0,
-            "REMNANTS_OF_TOWN": 0,
-            "BURNT_FARMS": 0,
-            "FORBIDDEN_TEMPLE": 0,
-            "HIGH_PEAKS": 0,
-            "LAST_SUMMIT": 0,
-            "CLONE_LAB": 0,
-            "STRONGHOLD": 0
-        }
-    }
+        "LAB": false,
+        "MOUNT_VILLAGE": false,
+        "NORMAL_START": true,
+        "SUMMIT": false,
+        "TEMPLE": false
+    },
+    "NAME": "DEV_TEST"
 }
