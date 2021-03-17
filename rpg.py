@@ -6,8 +6,10 @@ import dev
 from decouple import config
 import time
 import itemdat
+import pathlib
+pathto = str(pathlib.Path().absolute())
+
 devmsg = dev.Dev.SendMessage()
-pathto = str(config("XAI_PATH"))
 devmsg("Setting up RPG module...")
 
 class RPG():
@@ -185,7 +187,8 @@ class RPG():
                 "LAST_SUMMIT": 0,
                 "CLONE_LAB": 0,
                 "STRONGHOLD": 0
-            }
+            },
+            "EXPERIENCE": 0
         }
     }
         def new_profile(self, slotnum:int):
@@ -221,7 +224,7 @@ class RPG():
             with open((pathto + f"\\playerdata\\player{profile}.json"), "r", encoding='utf-8') as file:
                 devmsg(f"Loading profile with number {profile}...")
                 profiledata = json.load(file)
-            print("Выберите айди предмета, чтобы дать персонажу. АЙДИ можно посмотреть на вики, то есть на\n")
+            print("Выберите айди предмета, чтобы дать персонажу. АЙДИ можно посмотреть на вики, то есть на\nhttps://github.com/Maxuss/XAI/wiki/ID-предметов")
             id_item = input("Введите айди\n")
             try:
                 with open((pathto + "\\data\\items.json"), "r", encoding='utf-8') as file:

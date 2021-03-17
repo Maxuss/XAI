@@ -2,8 +2,8 @@ import os
 import sys
 import json
 from decouple import config
-
-pathto = str(config("XAI_PATH"))
+import pathlib
+pathto = str(pathlib.Path().absolute())
 
 with open('data.json', 'r') as file:
     data = json.load(file)

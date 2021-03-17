@@ -9,72 +9,78 @@
             "DATA": {
                 "DMG": "INTNT",
                 "MAX_HP": "INT",
-                "CURRENT_HP": "INT"
-        
+                "CURRENT_HP": "INT",
+                "EXPERIENCE": "INT"
             }
         }
     },
     "MOBDATA": {
         "NORMAL": {
             "FIELDS": {
-                "PIG": {
-                    "NAME": "Свинья!",
-                    "BATTLE_NAME": "свинья",
+                "DREAM": {
+                    "NAME": "Свинья!.. Погодите, это Дрим!",
+                    "BATTLE_NAME": "дрим",
                     "?TYPE": "NORMAL",
                     "DATA": {
                         "DMG": 1,
                         "MAX_HP": 10,
-                        "CURRENT_HP": 10
+                        "CURRENT_HP": 10,
+                        "EXPERIENCE": 5
                     }
                 },
-                "BOAR": {
-                    "NAME": "Кабан!",
-                    "BATTLE_NAME": "кабан",
+                "TECHNO": {
+                    "NAME": "Кабан!.. Погодите, это Текноблейд!",
+                    "BATTLE_NAME": "текноблейд",
                     "?TYPE": "NORMAL",
                     "DATA": {
                         "DMG": 5,
                         "MAX_HP": 25,
-                        "CURRENT_HP": 25
+                        "CURRENT_HP": 25,
+                        "EXPERIENCE": 15
                     }
                 },
-                "ZOMBIE": {
-                    "NAME": "Упырь!",
-                    "BATTLE_NAME": "упырь",
+                "SCHOOLMAN": {
+                    "NAME": "Злой школьник!",
+                    "BATTLE_NAME": "школьник",
                     "?TYPE": "NORMAL",
                     "DATA": {
                         "DMG": 6,
                         "MAX_HP": 30,
-                        "CURRENT_HP": 30
+                        "CURRENT_HP": 30,
+                        "EXPERIENCE": 10
                     }
                 },
-                "POSSESSED": {
-                    "NAME": "Шаман!",
+                "E_TROLL": {
+                    "NAME": "Безумный троллфейс!",
                     "BATTLE_NAME": "шаман",
                     "?TYPE": "NORMAL",
                     "DATA": {
                         "DMG": 3,
                         "MAX_HP": 30,
-                        "CURRENT_HP": 30
+                        "CURRENT_HP": 30,
+                        "EXPERIENCE": 50
                     }
                 },
-                "BOAR_RIDER": {
-                    "NAME": "Упырь на кабане!",
-                    "BATTLE_NAME": "упырь-наездник",
+                "O_TROLL": {
+                    "NAME": "Троллфейс в масле! Погодите, сейчас дождь, а масло плавает в воде, значит...",
+                    "BATTLE_NAME": "летающий троллфейс",
                     "?TYPE": "RARE",
                     "DATA": {
                         "DMG": 10,
                         "MAX_HP": 50,
-                        "CURRENT_HP": 50
+                        "CURRENT_HP": 50,
+                        "EXPERIENCE": 40
                     }
                 },
-                "FIELD_MIMIC": {
-                    "NAME": "Сундук... Это же редкий полевой мимик!",
-                    "BATTLE_NAME": "мимик",
+                "GNOMED": {
+                    "NAME": "Гном! Тебя загномили!",
+                    "BATTLE_NAME": "гномер",
                     "?TYPE": "RARE",
                     "DATA": {
                         "DMG": 15,
                         "MAX_HP": 75,
-                        "CURRENT_HP": 75
+                        "CURRENT_HP": 75,
+                        "EXPERIENCE": 70
                     }
                 },
                 "BOSS:1": {
@@ -85,7 +91,8 @@
                     "DATA": {
                         "DMG": 10,
                         "MAX_HP": 300,
-                        "CURRENT_HP": 300
+                        "CURRENT_HP": 300,
+                        "EXPERIENCE": 1000
                         
                     }
                 }

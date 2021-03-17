@@ -4,9 +4,10 @@ import os
 from decouple import config
 import dev
 import time
+import captcha
 import random
-
-pathto = str(config("XAI_PATH"))
+import pathlib
+pathto = str(pathlib.Path().absolute())
 devmsg = dev.Dev.SendMessage()
 devmsg("Loading itemdata")
 
@@ -51,15 +52,19 @@ class Item():
             return location
 
         def turn(self, pehp:int, filler:bool, enemy:dict, pdmg:int, loc:str, profile):
-            print("Следующий ход!\n")
+            print("\nСледующий ход!\n")
             devmsg("Initializing next turn...")
             # turn
             maxpehp = pehp
             enemyhp = enemy["DATA"]["CURRENT_HP"]
+            enemyxp = enemy["DATA"]["EXPERIENCE"]
             enemymhp = enemy["DATA"]["MAX_HP"]
             enemydmg = enemy["DATA"]["DMG"]
             enemybname = enemy["BATTLE_NAME"]
             enemyname = enemy["NAME"]
+            with open((pathto + f"\\playerdata\\player{profile}.json"), 'r') as file:
+                pl = json.load(file)
+            playerexp = pl["EXPERIENCE"]
             print(f"Вам встречается {enemyname}")
             while pehp > 0:
                 enemyhp -= pdmg
@@ -71,19 +76,25 @@ class Item():
                 elif enemyhp <= 0:
                     print(f"Вы добиваете  {enemybname}а!")
                     print(f"Ваше здоровье: {pehp}/{maxpehp} ЭЗ")
+                    print(f"Вы получаете {enemyxp} очков опыта!")
+                    print(f"У вас {playerexp} всего очков опыта")
+                    playerexp += enemyxp
                     filler = True
                     break
                 print("Нажмите ENTER для продолжения!")
                 enter = input()
-            if pehp < 1:
+                with open((pathto + f"\\playerdata\\player{profile}.json"), 'w') as file:
+                    json.dump(pl, file)
+            if pehp <= 0:
                 print("Вы погибли!")
+                with open((pathto + f"\\playerdata\\player{profile}.json"), 'w') as file:
+                    json.dump(pl, file)
                 enter = input()
-                filler = True
-                pass
+                exit()
             else:
-                filler = True
-                pass
-            self.battle(self, profile, enemy)
+                enter = input("Подтвердите продолжение битвы!")
+                captcha.generate_captcha()
+                self.battle(self, profile, enemy)
 
             
         def battle(self, profile:int, enemy):
@@ -120,7 +131,6 @@ class Item():
             enemydmg = enemy["DATA"]["DMG"]
             pehp -= enemydmg
             filler = True
-            enter = input("Нажмите любую кнопку для начала битвы\n")
             enemy = generate_random_mob(location, profile)
             self.turn(self, pehp, filler, enemy, pdmg, location, profile)
 
