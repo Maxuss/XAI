@@ -1,7 +1,7 @@
 {
     "FORMAT": "ID: {'name': 'name', 'info': 'description', 'DATA': {'magdmg': int, 'edmg': int, 'fdmg': int, '?has_abilities': bool, 'abilities': 'refer_to_def_in_defs.py str'}}",
     "ITEMDATA": {
-        "001": {
+        "BONK_BAT": {
             "NAME": "Бонк Бита",
             "INFO": "Деревянная бита, которая делает *БОНК*",
             
@@ -16,7 +16,7 @@
             "?HAS_ABILITES": false,
             "ABILITES": null
         },
-        "002": {
+        "NM_MEDALLION": {
             "NAME": "Медальон Моршу",
             "INFO": "Моршу сказал, что он пригодится.",
             
@@ -32,7 +32,7 @@
             "?HAS_ABILITES": false,
             "ABILITES": null
         },
-        "003": {
+        "COZY_COAT": {
             "NAME": "Шерстяная Накидка",
             "INFO": "Теплая.",
             
@@ -47,7 +47,7 @@
             "?HAS_ABILITES": false,
             "ABILITES": null
         },
-        "004": {
+        "STEEL_FALCHION": {
             "NAME": "Железный фальшион",
             "INFO": "Крайне острый клинок из музея, становящийся толще к концу лезвия.",
             
@@ -64,7 +64,7 @@
                 "MAIN": "Abilites.Weapons.falch_hit()"
             }
         },
-        "005": {
+        "WATER_CAN": {
             "NAME": "Банка с Водой",
             "INFO": "Все еще закрытая",
             
@@ -82,7 +82,7 @@
                 "MAIN": "Abilities.Consumables.drink()"
             }
         },
-        "006": {
+        "GOLDEN_BS": {
             "NAME": "Золотое лезвие",
             "INFO": "Несмотря на свою крастоу крайне неудобный для использования.",
             
@@ -97,7 +97,7 @@
             "?HAS_ABILITES": false,
             "ABILITES": null
         },
-        "007": {
+        "LIGHT_ARMOR": {
             "NAME": "Легкий бронежилет",
             "INFO": "Тяжелый.",
             
@@ -115,7 +115,7 @@
                 "PASSIVE": "Abilities.Armor.bullet_shield()"
             }
         },
-        "008": {
+        "SMALL_PISTOL": {
             "NAME": "Малый пистолет",
             "INFO": "Есть много патронов!",
             
@@ -130,7 +130,7 @@
             "?HAS_ABILITES": false,
             "ABILITES": null
         },
-        "009": {
+        "BUTCHER_SWORD": {
             "NAME": "Мясницкий тесак",
             "INFO": "Тяжелый и острый!",
             
@@ -145,7 +145,7 @@
             "?HAS_ABILITES": false,
             "ABILITES": null
         },
-        "010": {
+        "BHAMMER": {
             "NAME": "Боевой молот.",
             "INFO": "И откуда он у клона Моршу?",
             
@@ -163,7 +163,7 @@
                 "PASSIVE": "Abilities.Weapons.slowdown()"
             }
         },
-        "011": {
+        "HEAVY_ARMER": {
             "NAME": "Тяжелый бронежилет",
             "INFO": "К апокалипсису готов!",
             
@@ -180,7 +180,7 @@
                 "PASSIVE": "Abilities.Armor.bullet_shield()"
             }
         },
-        "012": {
+        "POOPOO_FS": {
             "NAME": "Автомат КАКА-47",
             "INFO": "Как АК, только хуже!",
             
@@ -195,7 +195,7 @@
             "?HAS_ABILITES": false,
             "ABILITES": null
         },
-        "013": {
+        "HEAVY_GUN": {
             "NAME": "Тяжелый пулемет",
             "INFO": "Как его вообще поднять?!",
             
@@ -212,7 +212,7 @@
                 "MAIN": "Abilites.Weapons.bullet_storm(50)"
             }
         },
-        "014": {
+        "POSION_DARTS": {
             "NAME": "Ядовитые дротики",
             "INFO": "Очень ядовитые!",
             
@@ -229,7 +229,7 @@
                 "PASSIVE": "Abilities.Weapons.poison_shield()"
             }
         },
-        "015": {
+        "MONKS_ROBE": {
             "NAME": "Монашья роба",
             "INFO": "Бижутерия с кристаллами включена в набор!",
             
@@ -244,7 +244,7 @@
             "?HAS_ABILITES": false,
             "ABILITES": null
         },        
-        "016": {
+        "ARMOR_ARMOR": {
             "NAME": "Бронированный бронежилет",
             "INFO": "Бронь!",
             
@@ -259,7 +259,7 @@
             "?HAS_ABILITES": false,
             "ABILITES": null
         },        
-        "017": {
+        "ROCK_PILE": {
             "NAME": "Куча камней",
             "INFO": "Груда камней",
             

@@ -36,10 +36,7 @@
     },
     "HM_ON": false,
     "INV": [
-        "001",
-        "002",
-        "003",
-        "004"
+        "BONK_BAT"
     ],
     "LOCATIONS VISITED": {
         "ABANDONED_FARMS": false,
