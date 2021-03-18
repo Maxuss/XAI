@@ -50,17 +50,22 @@ class RPG():
             else:
                 prof[f"prof{i}"] = 'пуст'
         profstr = "Профиль 1 - " + prof["prof1"] + "\nПрофиль 2 - " + prof["prof2"] + "\nПрофиль 3 - " + prof["prof3"]
-        print("##########################")
-        time.sleep(0.5)
-        print("#####================#####")
-        time.sleep(0.5)
-        print("#####===-   XAI  -===#####")
-        time.sleep(0.5)
-        print("#####================#####")
-        time.sleep(0.5)
-        print("##########################")
-        time.sleep(0.5)
-        print("Welcome to XAI!\n")
+        print("▀████    ▐████▀    ▄████████  ▄█  ")
+        time.sleep(0.2)
+        print("  ███▌   ████▀    ███    ███ ███  ")
+        time.sleep(0.2)
+        print("   ███  ▐███      ███    ███ ███▌ ")
+        time.sleep(0.2)
+        print("   ▀███▄███▀      ███    ███ ███▌ ")
+        time.sleep(0.2)
+        print("   ████▀██▄     ▀███████████ ███▌ ")
+        time.sleep(0.2)
+        print("  ▐███  ▀███      ███    ███ ███  ")
+        time.sleep(0.2)
+        print(" ▄███     ███▄    ███    ███ ███  ")
+        time.sleep(0.2)
+        print("████       ███▄   ███    █▀  █▀ \n")
+        print("Добро пожаловать в XAI!\n")
         print("Введите 1 чтобы начать")
         print("Введите 2 чтобы выйти")
         profstr = "Профиль 1 - " + prof["prof1"] + "\nПрофиль 2 - " + prof["prof2"] + "\nПрофиль 3 - " + prof["prof3"]
@@ -193,7 +198,7 @@ class RPG():
     }
         def new_profile(self, slotnum:int):
             if slotnum >= 0 and slotnum <= 3:
-                with open((pathto + f"\\playerdata\\player{slotnum}.json"), "r") as file:
+                with open((pathto + f"\\playerdata\\player{slotnum}.json"), "r", encoding='utf-8') as file:
                     devmsg(f"Creating new profile with number {slotnum}...")
                     profiledata = json.load(file)
                 isempty = profiledata["?EMPTY"]
@@ -201,7 +206,7 @@ class RPG():
                     devmsg(f"Cant overwrite an existing file with number '{slotnum}'")
                     devmsg("Looking for solution...")
                     time.sleep(1)
-                    with open((pathto + f"\\playerdata\\player{slotnum}.json"), "r") as file:
+                    with open((pathto + f"\\playerdata\\player{slotnum}.json"), "r", encoding='utf-8') as file:
                         devmsg(f"Opening the file instead")
                         profiledata = json.load(file)
                     return profiledata

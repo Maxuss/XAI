@@ -54,6 +54,8 @@ class Item():
         def turn(self, pehp:int, filler:bool, enemy:dict, pdmg:int, loc:str, profile):
             print("\nСледующий ход!\n")
             devmsg("Initializing next turn...")
+            counter = 0
+            boss = loc + "_"
             # turn
             maxpehp = pehp
             enemyhp = enemy["DATA"]["CURRENT_HP"]
@@ -67,6 +69,9 @@ class Item():
             playerexp = pl["EXPERIENCE"]
             print(f"Вам встречается {enemyname}")
             while pehp > 0:
+                with open((pathto + f"\\playerdata\\player{profile}.json"), 'r', encoding='utf-8') as file:
+                    _pdat = json.load(file)
+                playerexp = _pdat["EXPERIENCE"]
                 enemyhp -= pdmg
                 pehp -= enemydmg
                 print(f"{enemybname.capitalize()} атаковал вас на {enemydmg} урона, а вы нанесли ему {pdmg} единиц урона.")
@@ -79,21 +84,32 @@ class Item():
                     print(f"Вы получаете {enemyxp} очков опыта!")
                     print(f"У вас {playerexp} всего очков опыта")
                     playerexp += enemyxp
+                    counter += enemyxp
                     filler = True
                     break
                 print("Нажмите ENTER для продолжения!")
                 enter = input()
-                with open((pathto + f"\\playerdata\\player{profile}.json"), 'w') as file:
-                    json.dump(pl, file)
+                with open((pathto + f"\\playerdata\\player{profile}.json"), 'w', encoding='utf-8') as file:
+                    json.dump(pl, file, indent=4, sort_keys=True, ensure_ascii=False)
             if pehp <= 0:
                 print("Вы погибли!")
-                with open((pathto + f"\\playerdata\\player{profile}.json"), 'w') as file:
-                    json.dump(pl, file)
+                with open((pathto + f"\\playerdata\\player{profile}.json"), 'w', encoding='utf-8') as file:
+                    json.dump(pl, file, indent=4, sort_keys=True, ensure_ascii=False)
                 enter = input()
                 exit()
             else:
                 enter = input("Подтвердите продолжение битвы!")
-                captcha.generate_captcha()
+                if counter >= 250:
+                    counter = 0
+                    print("Земля разгневана вашим побоищем! Появляется босс локации!")
+                    self.battle(self, profile, boss)
+                    print("Босс побежден!")
+                elif counter >= 100 and counter <= 150:
+                    counter += 50
+                    print("Своим геноцидом вы призвали каптчамастера!")
+                    captcha.summon_captcha()
+                else:
+                    captcha.generate_captcha()    
                 self.battle(self, profile, enemy)
 
             
@@ -133,6 +149,7 @@ class Item():
             filler = True
             enemy = generate_random_mob(location, profile)
             self.turn(self, pehp, filler, enemy, pdmg, location, profile)
+        
 
 attack = Item.Use.battle
 next_turn = Item.Use.turn
@@ -145,7 +162,7 @@ def generate_random_mob(LOCATION:str, playernum):
     devmsg("Getting mob data...")
     mobs_to_choose = list(mobdata["MOBDATA"]["NORMAL"][LOCATION].keys())
     chosen = random.choice(mobs_to_choose)
-    while "BOSS" in str(chosen):
+    while LOCATION in str(chosen):
         devmsg("Chosen mob is a boss! Rerolling...")
         chosen = random.choice(mobs_to_choose)
     tc = mobdata["MOBDATA"]["NORMAL"][LOCATION][chosen]

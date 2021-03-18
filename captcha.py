@@ -68,7 +68,7 @@ Usable = {
     \|_______|
         """,
     "h": """,
-___  ___     
+ ___  ___     
 |\  \|\  \    
 \ \  \ \  \   
  \ \   __  \  
@@ -78,7 +78,7 @@ ___  ___
               
         """,
     "i": """,
-___     
+ ___     
 |\  \    
 \ \  \   
  \ \  \  
@@ -262,8 +262,7 @@ ___
               
         """,
     } 
-def generate_captcha():
-    coinflip = random.randint(0, 11)
+def generate_captcha(coinflip=random.randint(0, 11)):
     if coinflip == 10:
         ks = list(Usable.keys())
         a = random.choice(ks)
@@ -284,3 +283,6 @@ def generate_captcha():
         else:
             enter = input("Каптчамастер победил вас! Каптча введена неверно!")
             exit()
+
+def summon_captcha():
+    generate_captcha(10)
