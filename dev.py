@@ -7,7 +7,6 @@ pathto = str(pathlib.Path().absolute())
 
 with open('data.json', 'r') as file:
     data = json.load(file)
-
 devmode = data["DEV"]
 
 class Dev():

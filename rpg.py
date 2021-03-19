@@ -238,7 +238,7 @@ class RPG():
                     itemdata = itemd["ITEMDATA"]
                 _current = itemdata[id_item]
                 profiledata["INV"].append(id_item)
-                with open((pathto + f"\\playerdata\\player{profile}.json"), "w") as file:
+                with open((pathto + f"\\playerdata\\player{profile}.json"), "w", encoding='utf-8') as file:
                     devmsg("Dumping data to profile...")
                     json.dump(profiledata, file, indent=4, sort_keys=True, ensure_ascii=False)
                 print("Предмет добавлен!\nПерезайдите, чтобы посмотреть данные инвентаря!")
