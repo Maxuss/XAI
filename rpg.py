@@ -128,7 +128,7 @@ class RPG():
         elif answ == 1:
             self.get_user_inv(profile_chosen)
         elif answ == 3:
-            enemy = itemdat.generate_random_mob(itemdat.Item.Use.GetPlayerLocation(profile_chosen), profile_chosen)
+            enemy = itemdat.generate_random_mob(itemdat.Item.Use.GetPlayerLocation(profile_chosen))
             itemdat.Item.Use.battle(itemdat.Item.Use, profile_chosen, enemy)
         answ2 = input("\n")
 
@@ -171,7 +171,7 @@ class RPG():
             "DEATH_AMOUNT": 0,
             "HM_ON": False,
             "INV": [],
-            "CURRENT_LOCATION": "00",
+            "CURRENT_LOCATION": "FIELDS",
             "BALANCE": 0,
             "ENEMIES_SLAIN": {
                 "NORMAL": {

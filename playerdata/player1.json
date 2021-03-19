@@ -1,3 +1,59 @@
 {
-    "?EMPTY": true
+    "?EMPTY": false,
+    "BALANCE": 0,
+    "CURRENT_LOCATION": "FIELDS",
+    "DEATH_AMOUNT": 0,
+    "ENDINGS_COMPLETED": {
+        "MIDDLE": false,
+        "NEGATIVE": false,
+        "OUTBREAK": false,
+        "POSITIVE": false,
+        "SECRET": false,
+        "SHREK": false,
+        "S_DEATH": false,
+        "TRUTH": false
+    },
+    "ENEMIES_SLAIN": {
+        "HM": {
+            "BURNT_FARMS": 0,
+            "CLONE_LAB": 0,
+            "FORBIDDEN_TEMPLE": 0,
+            "HIGH_PEAKS": 0,
+            "HOPELESS_FIELDS": 0,
+            "LAST_SUMMIT": 0,
+            "REMNANTS_OF_TOWN": 0,
+            "STRONGHOLD": 0
+        },
+        "NORMAL": {
+            "ABANDONED_FARMS": 0,
+            "BROKEN_TOWN": 0,
+            "FIELDS": 0,
+            "LAB": 0,
+            "MOUNT_VILLAGE": 0,
+            "SUMMIT": 0,
+            "TEMPLE": 0
+        }
+    },
+    "EXPERIENCE": 0,
+    "HM_ON": false,
+    "INV": [],
+    "LOCATIONS VISITED": {
+        "ABANDONED_FARMS": false,
+        "BROKEN_TOWN": false,
+        "FIELDS": false,
+        "HARDMODE_LOCS": {
+            "BURNT_FARMS": false,
+            "CLONE_LAB": false,
+            "FORBIDDEN_TEMPLE": false,
+            "HIGH_PEAKS": false,
+            "HOPELESS_FIELDS": false,
+            "LAST_SUMMIT": false,
+            "REMNANTS_OF_TOWN": false
+        },
+        "LAB": false,
+        "MOUNT_VILLAGE": false,
+        "SUMMIT": false,
+        "TEMPLE": false
+    },
+    "NAME": "Р В Р’В Р вЂ™Р’В Р В РІР‚в„ўР вЂ™Р’В Р В Р’В Р Р†Р вЂљРІвЂћСћР В РІР‚в„ўР вЂ™Р’В Р В Р’В Р вЂ™Р’В Р В Р’В Р В РІР‚в„–Р В Р’В Р В Р вЂ№Р В Р вЂ Р Р†Р вЂљРЎвЂєР РЋРЎвЂєР В Р’В Р вЂ™Р’В Р В РІР‚в„ўР вЂ™Р’В Р В Р’В Р Р†Р вЂљРІвЂћСћР В РІР‚в„ўР вЂ™Р’В Р В Р’В Р вЂ™Р’В Р В Р вЂ Р В РІР‚С™Р Р†РІР‚С›РЎС›Р В Р’В Р Р†Р вЂљРІвЂћСћР В РІР‚в„ўР вЂ™Р’В°Р В Р’В Р вЂ™Р’В Р В РІР‚в„ўР вЂ™Р’В Р В Р’В Р Р†Р вЂљРІвЂћСћР В РІР‚в„ўР вЂ™Р’В Р В Р’В Р вЂ™Р’В Р В Р’В Р В РІР‚в„–Р В Р’В Р В РІР‚В Р В Р’В Р Р†Р вЂљРЎв„ўР В Р Р‹Р РЋРЎв„ўР В Р’В Р вЂ™Р’В Р В РІР‚в„ўР вЂ™Р’В Р В Р’В Р вЂ™Р’В Р В Р’В Р Р†Р вЂљРІвЂћвЂ“Р В Р’В Р вЂ™Р’В Р В РІР‚в„ўР вЂ™Р’В Р В Р’В Р В Р вЂ№Р В Р вЂ Р В РІР‚С™Р РЋРЎв„ў"
 }

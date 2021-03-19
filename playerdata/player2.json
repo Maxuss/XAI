@@ -1,7 +1,7 @@
 {
     "?EMPTY": false,
     "BALANCE": 0,
-    "CURRENT_LOCATION": "00",
+    "CURRENT_LOCATION": "FIELDS",
     "DEATH_AMOUNT": 0,
     "ENDINGS_COMPLETED": {
         "MIDDLE": false,
@@ -14,7 +14,6 @@
         "TRUTH": false
     },
     "ENEMIES_SLAIN": {
-        "EXPERIENCE": 0,
         "HM": {
             "BURNT_FARMS": 0,
             "CLONE_LAB": 0,
@@ -57,5 +56,6 @@
         "SUMMIT": false,
         "TEMPLE": false
     },
-    "NAME": "Asd"
+    "NAME": "Asd",
+    "EXPERIENCE": 0
 }

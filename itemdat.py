@@ -7,6 +7,9 @@ import time
 import captcha
 import random
 import pathlib
+import loot_gen
+
+lootgen = loot_gen.GenerateLoot
 pathto = str(pathlib.Path().absolute())
 devmsg = dev.Dev.SendMessage()
 devmsg("Loading itemdata")
@@ -51,13 +54,16 @@ class Item():
             location = player["CURRENT_LOCATION"]
             return location
 
-        def turn(self, pehp:int, filler:bool, enemy:dict, pdmg:int, loc:str, profile):
+        def turn(self, pehp:int, filler:bool, enemy:dict, pdmg:int, loc:str, profile, enemy_name:str):
             print("\nСледующий ход!\n")
             devmsg("Initializing next turn...")
             counter = 0
             boss = loc + "_"
             # turn
             maxpehp = pehp
+            if pdmg <= 1:
+                devmsg("CHANGED PLAYERS DMG IN CASE OF BUG")
+                pdmg = 4
             enemyhp = enemy["DATA"]["CURRENT_HP"]
             enemyxp = enemy["DATA"]["EXPERIENCE"]
             enemymhp = enemy["DATA"]["MAX_HP"]
@@ -66,6 +72,7 @@ class Item():
             enemyname = enemy["NAME"]
             with open((pathto + f"\\playerdata\\player{profile}.json"), 'r') as file:
                 pl = json.load(file)
+                devmsg(str(pl))
             playerexp = pl["EXPERIENCE"]
             print(f"Вам встречается {enemyname}")
             while pehp > 0:
@@ -98,6 +105,7 @@ class Item():
                 enter = input()
                 exit()
             else:
+                lootgen(loc, enemy_name, profile) 
                 enter = input("Подтвердите продолжение битвы!")
                 if counter >= 250:
                     counter = 0
@@ -110,10 +118,10 @@ class Item():
                     captcha.summon_captcha()
                 else:
                     captcha.generate_captcha()    
-                self.battle(self, profile, enemy)
+                self.battle(self, profile, generate_random_mob(loc))
 
             
-        def battle(self, profile:int, enemy):
+        def battle(self, profile:int, enemy_name):
             itemdata = ParseItemJSON()
             player_items = self.GetPlayerItems(itemdata, profile)
             location = self.GetPlayerLocation(profile)
@@ -137,6 +145,9 @@ class Item():
                 pdef += idat_def
                 devmsg(f"Processed item {item}!")
             devmsg("Processed all the items in player's inventory!")
+            with open((pathto + '\\data\\enemies.json'), 'r', encoding='utf-8') as file:
+                mobdata = json.load(file)
+            enemy = mobdata["MOBDATA"]["NORMAL"][location][enemy_name]
             enemyname = enemy["NAME"]
             enemybname = enemy["BATTLE_NAME"]
             devmsg("Starting battle...")
@@ -147,24 +158,29 @@ class Item():
             enemydmg = enemy["DATA"]["DMG"]
             pehp -= enemydmg
             filler = True
-            enemy = generate_random_mob(location, profile)
-            self.turn(self, pehp, filler, enemy, pdmg, location, profile)
+            enemsy = generate_random_mob(location)
+            with open((pathto + "\\data\\enemies.json"), 'r', encoding='utf-8') as file:
+                enemies = json.load(file)
+            enemy = enemies["MOBDATA"]["NORMAL"][location][enemsy]
+            self.turn(self, pehp, filler, enemy, pdmg, location, profile, enemy_name)
         
 
 attack = Item.Use.battle
 next_turn = Item.Use.turn
 
-def generate_random_mob(LOCATION:str, playernum):
-    with open((pathto + f'\\playerdata\\player{playernum}.json'), 'r', encoding='utf-8') as file:
-        playerdata = json.load(file)
+def generate_random_mob(location:str):
     with open((pathto + '\\data\\enemies.json'), 'r', encoding='utf-8') as file:
         mobdata = json.load(file)
     devmsg("Getting mob data...")
-    mobs_to_choose = list(mobdata["MOBDATA"]["NORMAL"][LOCATION].keys())
+    mobs_to_choose = list(mobdata["MOBDATA"]["NORMAL"][location].keys())
     chosen = random.choice(mobs_to_choose)
-    while LOCATION in str(chosen):
+    while location in str(chosen):
         devmsg("Chosen mob is a boss! Rerolling...")
         chosen = random.choice(mobs_to_choose)
-    tc = mobdata["MOBDATA"]["NORMAL"][LOCATION][chosen]
+    tc = mobdata["MOBDATA"]["NORMAL"][location][chosen]
     devmsg(f"Chosen the mob with key '{chosen}'")
-    return tc
+    return chosen
+    
+    
+    # WHY HAVE I DONE THIS
+    # HELP

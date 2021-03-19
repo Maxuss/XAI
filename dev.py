@@ -1,7 +1,6 @@
 import os
 import sys
 import json
-from decouple import config
 import pathlib
 pathto = str(pathlib.Path().absolute())
 
