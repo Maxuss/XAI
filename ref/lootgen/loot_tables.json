@@ -1,3 +1,37 @@
 {
-    
+    "NORMAL_MODE": {
+        "FIELDS": {
+            "DREAM": {
+                "WATER_CAN": 10
+            },
+            "TECHNO": {
+                "BONK_BAT": 10,
+                "WATER_CAN": 8
+            },
+            "SCHOOLMAN": {
+                "WATER_CAN": 5,
+                "COZY_COAT": 10
+            },
+            "E_TROLL": {
+                "GOLDEN_BS": 10
+            },
+            "O_TROLL": {
+                "STEEL_FALCHION": 8,
+                "WATER_CAN": 5
+            },
+            "GNOMED": {
+                "WATER_CAN": 5,
+                "LIGHT_ARMOR": 10,
+                "SMALL_PISTOL": 9
+            },
+            "FIELDS_": {
+                "WATER_CAN": 1,
+                "BHAMMER": 1,
+                "HEAVY_ARMOR": 1,
+                "HEAVY_GUN": 10,
+                "ROCK_PILE": 10,
+                "ARMOR_ARMOR": 15
+            }
+        }
+    }
 }

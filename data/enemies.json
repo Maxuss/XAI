@@ -52,7 +52,7 @@
                 },
                 "E_TROLL": {
                     "NAME": "Безумный троллфейс!",
-                    "BATTLE_NAME": "шаман",
+                    "BATTLE_NAME": "безумец",
                     "?TYPE": "NORMAL",
                     "DATA": {
                         "DMG": 3,

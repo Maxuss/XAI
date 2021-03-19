@@ -163,7 +163,7 @@
                 "PASSIVE": "Abilities.Weapons.slowdown()"
             }
         },
-        "HEAVY_ARMER": {
+        "HEAVY_ARMOR": {
             "NAME": "Тяжелый бронежилет",
             "INFO": "К апокалипсису готов!",
             
